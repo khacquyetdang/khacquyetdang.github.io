@@ -58,7 +58,7 @@ body a:focus {
 
 .banner {
     /*background: url(../images/bg2.jpg)no-repeat center 0px fixed;*/
-    background: rgba(39, 174, 96, 1);
+    background: #7ecaf6;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
