@@ -54,7 +54,8 @@ body a:focus {
 /*-- banner --*/
 
 .banner {
-    background: url(../images/bg2.jpg)no-repeat center 0px fixed;
+    /*background: url(../images/bg2.jpg)no-repeat center 0px fixed;*/
+    background: rgba(39, 174, 96, 1);
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -391,7 +392,7 @@ a.wthree-.about-link {
 }
 
 .agileits-about-grid2 {
-    background: #f2849e;
+    background: #8bde8c;
 }
 
 .agileits-about-grid3 {
@@ -862,7 +863,8 @@ div#services {
 /*-- Contact --*/
 
 .contact-main-w3ls {
-    background: url(../images/contact.jpg) no-repeat center;
+    /*background: url(../images/contact.jpg) no-repeat center;*/
+    background: rgba(39, 174, 96, 0.25);
     background-size: cover;
 	-webkit-background-size: cover;
     -o-background-size: cover;
