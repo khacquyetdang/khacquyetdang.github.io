@@ -1,21 +1,952 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- banner -->
+<div id="home"
+     class="banner">
+  <div class="banner-agileinfo">
+    <!-- header -->
+    <div class="header">
+      <div class="container">
+        <div class="menu">
+          <a href=""
+             id="menuToggle">
+            <span class="navClosed"></span>
+          </a>
+          <nav>
+            <a href="#home"
+               class="active scroll">Home</a>
+            <a href="#about"
+               class="scroll">À propos de moi</a>
+            <a href="#skills"
+               class="scroll">Compétences</a>
+            <a href="#gallery"
+               class="scroll">Portfolio</a>
+            <a href="#contact"
+               class="scroll">Contact</a>
+            <a href="Dang_Khac_Quyet_CV.pdf"
+               download="Dang_Khac_Quyet_CV.pdf">Mon CV</a>
+
+          </nav>
+          <script>
+            (function ($) {
+              // Menu Functions
+              $(document).ready(function () {
+                $('#menuToggle').click(function (e) {
+                  var $parent = $(this).parent('.menu');
+                  $parent.toggleClass("open");
+                  var navState = $parent.hasClass('open') ? "hide" : "show";
+                  $(this).attr("title", navState + " navigation");
+                  // Set the timeout to the animation length in the CSS.
+                  setTimeout(function () {
+                    console.log("timeout set");
+                    $('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+                  }, 200);
+                  e.preventDefault();
+                });
+              });
+            })(jQuery);
+          </script>
+
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <!-- //header -->
+    <div class="banner-text">
+      <div class="container">
+        <h1>
+          <a href="index.html">Khac Quyet DANG</a>
+        </h1>
+        <h2 class="w3ls-bnrtext">Je suis
+          <span> Mobile </span>&
+          <span>Web </span> Développeur</h2>
+        <!-- <p class="w3ls-p">an interactive web designer with the passion for creativity</p> -->
+        <a href="#gallery"
+           class="buy btn-wayra scroll">Explorer mon portfolio</a>
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- //banner -->
+<!-- about -->
+<div class="agile-about w3ls-section text-center"
+     id="about">
+  <div class="container">
+    <h3 class="agileits-title">A propos de moi</h3>
+    <div class="agileits-about-grid">
+      <p>Je suis développeur mobile/web avec 5 ans d'expérience. J'ai déjà développé beaucoup d'applications mobiles et
+        web en
+        équipe ou en solo. Durant mon temps libre, je travaille sur mes projets personnels ou me former sur les
+        différents technologies.
+      </p>
+    </div>
+    <a href="#contact"
+       class="wthree- about-link scroll">Contactez moi</a>
+  </div>
+</div>
+<!-- //about -->
+<!-- about-bottom -->
+<div class="agileits-about-btm">
+  <div class="container">
+    <div class="w3-flex">
+      <div class="col-md-4 col-sm-4 ab1 agileits-about-grid2">
+        <span class="fa fa-graduation-cap  wthree-title-list"
+              aria-hidden="true"></span>
+        <h4 class="agileinfo-head">Education</h4>
+        <h5>Fullstack développeur (js stack)</h5>
+        <p>Freecodecamp.</p>
+        <h5>Ingénieur informatique</h5>
+        <p>Epita</p>
+        <h5>Bac +2 informatique</h5>
+        <p>Université de Rennes 1</p>
+      </div>
+      <div class="col-md-4 col-sm-4 ab1 agileits-about-grid3">
+        <span class="fa fa-shield  wthree-title-list"
+              aria-hidden="true"></span>
+        <h4 class="agileinfo-head">Expertise</h4>
+        <h5>Mobile Android Developpeur</h5>
+        <p>2012-2017</p>
+        <h5>Web Developpeur, Fullstack (php, nodejs)</h5>
+        <p>2016-2018</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- //about-bottom -->
+<!-- skills -->
+<div class="agile-service w3ls-section"
+     id="skills">
+  <div class="container">
+    <div class="col-md-5 w3_agileits-service-left">
+      <h3 class="agileits-title">Compétences</h3>
+      <p>Après plusieurs années d'expérience en développement, je maitrise bien android et php, les technologies de JS
+        en front
+        et back (jquery, reactjs, d3js, canvas, express, nodejs)</p>
+    </div>
+    <div class="col-md-7 skills-right">
+      <div class="vertical-skills  pull-right xs-center">
+        <ul class="list-inline">
+          <li>
+            <div class="skill"
+                 style="height:75%; background:#009688;">
+              <span class="value">85%</span>
+            </div>
+            <span class="title">Android</span>
+          </li>
+          <li>
+            <div class="skill"
+                 style="height:100%; background:#ff9d0d;">
+              <span class="value">100%</span>
+            </div>
+            <span class="title">HTML</span>
+          </li>
+          <li>
+            <div class="skill"
+                 style="height:90%; background:#03a9f4;">
+              <span class="value">90%</span>
+            </div>
+            <span class="title">CSS</span>
+          </li>
+          <li>
+            <div class="skill"
+                 style="height:80%; background:#b32eca;">
+              <span class="value">80%</span>
+            </div>
+            <span class="title">PHP (silex)</span>
+          </li>
+          <li>
+            <div class="skill"
+                 style="height:85%; background:#6361f0;">
+              <span class="value">85%</span>
+            </div>
+            <span class="title">JS </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div class="w3ls-section agileits-gallery"
+     id="gallery">
+  <div class="container">
+    <h3 class="agileits-title">Mes projets</h3>
+    <div class="bs-example bs-example-tabs"
+         role="tabpanel"
+         data-example-id="togglable-tabs">
+      <ul id="myTab"
+          class="nav nav-tabs"
+          role="tablist">
+        <li role="presentation"
+            class="active">
+          <a href="#home-main"
+             id="home-tab"
+             role="tab"
+             data-toggle="tab"
+             aria-controls="home-main"
+             aria-expanded="true">Tous</a>
+        </li>
+        <li role="presentation">
+          <a href="#mobile"
+             role="tab"
+             id="mobile-tab"
+             data-toggle="tab"
+             aria-controls="mobile">Mobile</a>
+        </li>
+        <li role="presentation">
+          <a href="#web"
+             role="tab"
+             id="web-tab"
+             data-toggle="tab"
+             aria-controls="web">Web</a>
+        </li>
+        <li role="presentation">
+          <a href="#games"
+             role="tab"
+             id="games-tab"
+             data-toggle="tab"
+             aria-controls="games">Jeux</a>
+        </li>
+      </ul>
+      <div id="myTabContent"
+           class="tab-content">
+        <div role="tabpanel"
+             class="tab-pane fade in active"
+             id="home-main"
+             aria-labelledby="home-tab">
+          <div class="w3_tab_img">
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/gestion_autoecole.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/gestion_autoecole.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <div class="agile-gallery-info">
+                  <h5>Projet personnel</h5>
+                  <p>Site web pour les moniteurs </p>
+                  <p>reactjs, php, silex, codeception</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/mobileglobe.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/mobileglobe.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://pro.mobileglobe.com/"
+                   target="_blank">
+
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Site web Mobileglobe</p>
+                    <p>PHP, html, css, js</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/danew.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/danew.png"
+                           alt=" "
+                           class="img-responsive">
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://danew.fr/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Siteweb Danew</p>
+                    <p>Php, mysql</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+
+                  <a class="cm-overlay"
+                     href="assets/images/feature_screen.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/feature_screen.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.mobileglobe.android.MobileGlobe&hl=en"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Application MobileGlobe</p>
+                    <p>Android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/roguelikedungeon.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/roguelikedungeon.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/roguelike-dungeon-crawler-game/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo roguelike dungeon</p>
+                    <p>reactjs</p>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/pinterestclone.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/pinterestclone.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://pinterestclone92.herokuapp.com/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Web app pinterest clone</p>
+                    <p>reactjs</p>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/simon_games.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/simon_games.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="http://139.59.148.85/html/code-io/simon_games/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo simon</p>
+                    <p>jquery</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/tictactoe.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/tictactoe.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="http://139.59.148.85/html/code-io/tictactoe/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo Tictactoe</p>
+                    <p>jquery</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/d3js.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/d3js.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/d3heatmap/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Statistique</p>
+                    <p>d3js, reactjs </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/callandjoin.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/callandjoin.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/d3heatmap/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Site web et application android</p>
+                    <p>Php, android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/kakiluki.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/kakiluki.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Kakiluki</p>
+                    <p>Android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/googleclone/main.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/googleclone/main.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://googlemapclone.herokuapp.com/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Google map clone</p>
+                    <p>Meteor, reactjs</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div role="tabpanel"
+             class="tab-pane fade"
+             id="web"
+             aria-labelledby="web-tab">
+          <div class="w3_tab_img">
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/gestion_autoecole.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/gestion_autoecole.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <div class="agile-gallery-info">
+                  <h5>Projet personnel</h5>
+                  <p>Site web pour les moniteurs </p>
+                  <p>reactjs, php, silex, codeception</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/mobileglobe.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/mobileglobe.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://pro.mobileglobe.com/"
+                   target="_blank">
+
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Site web Mobileglobe</p>
+                    <p>PHP, html, css, js</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/googleclone/main.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/googleclone/main.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://googlemapclone.herokuapp.com/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Google map clone</p>
+                    <p>Meteor, reactjs</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/danew.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/danew.png"
+                           alt=" "
+                           class="img-responsive">
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://danew.fr/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Siteweb Danew</p>
+                    <p>Php, mysql</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/d3js.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/d3js.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/d3heatmap/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Statistique</p>
+                    <p>d3js, reactjs </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/pinterestclone.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/pinterestclone.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://pinterestclone92.herokuapp.com/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Web app pinterest clone</p>
+                    <p>reactjs</p>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/callandjoin.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/callandjoin.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/d3heatmap/#/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Site web et application android</p>
+                    <p>Php, android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div role="tabpanel"
+             class="tab-pane fade"
+             id="mobile"
+             aria-labelledby="mobile-tab">
+          <div class="w3_tab_img">
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+
+                  <a class="cm-overlay"
+                     href="assets/images/feature_screen.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/feature_screen.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.mobileglobe.android.MobileGlobe&hl=en"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Application MobileGlobe</p>
+                    <p>Android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/kakiluki.png">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/kakiluki.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet en entreprise</h5>
+                    <p>Kakiluki</p>
+                    <p>Android</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+
+        <div role="tabpanel"
+             class="tab-pane fade"
+             id="games"
+             aria-labelledby="games-tab">
+          <div class="w3_tab_img">
+
+            <div class="col-sm-3 w3_tab_img_left">
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/roguelikedungeon.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/roguelikedungeon.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="https://khacquyetdang.github.io/roguelike-dungeon-crawler-game/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo roguelike dungeon</p>
+                    <p>reactjs</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/simon_games.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/simon_games.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="http://139.59.148.85/html/code-io/simon_games/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo simon</p>
+                    <p>jquery</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-3 w3_tab_img_left">
+
+              <div class="w3_tab_img_left_inner">
+
+                <div class="demo">
+                  <a class="cm-overlay"
+                     href="assets/images/tictactoe.png"
+                     target="_blank">
+                    <figure class="imghvr-shutter-in-out-diag-2">
+                      <img src="assets/images/tictactoe.png"
+                           alt=" "
+                           class="img-responsive" />
+                    </figure>
+                  </a>
+                </div>
+                <a href="http://139.59.148.85/html/code-io/tictactoe/"
+                   target="_blank">
+                  <div class="agile-gallery-info">
+                    <h5>Projet personnel</h5>
+                    <p>Jeux vidéo Tictactoe</p>
+                    <p>jquery</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- contact -->
+<div class="contact-w3-agileits w3ls-section"
+     id="contact">
+  <div class="container">
+    <h3 class="agileits-title cont-w3l">Contactez moi pour une mission ou un projet</h3>
+    <div class="contact-main-w3ls">
+      <div class="col-md-6  contact-left-w3ls">
+        <div class="mail contact-grid-agileinfo">
+          <div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+            <h4>Email</h4>
+          </div>
+          <div class="col-md-8  col-sm-8 col-xs-8 contact-text-agileinfo">
+            <a href="mailto:khacquyet.dang.pro@gmail.com">khacquyet.dang.pro@gmail.com</a>
+            <br>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="call contact-grid-agileinfo">
+          <div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+            <h4>Phone</h4>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+            <a href="tel:+33679069881">
+              <p>+33679069881</p>
+            </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="contact-grid-agileinfo">
+          <div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+            <h4>Addresse</h4>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+            <p>41 Rue de la Fontaine Grelot
+              <br> 92340 Bourg-La-Reine
+              <br> France.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="visit wthree-social-icons contact-grid-agileinfo">
+          <div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+            <h4>Suivez moi</h4>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+            <ul class="w3-links">
+              <li>
+                <a href="https://www.facebook.com/khacquyet.dang"
+                   target="_blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/khac-quyet-dang-5146b431/"
+                   target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/khacquyetdang"
+                   target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="contact-main">
+        <div class="col-md-6 agileits-main-right">
+          <form action="#"
+                method="post"
+                class="agile_form">
+            <label class="header">Votre nom</label>
+            <div class="icon1 w3ls-name1">
+              <input placeholder=" "
+                     name="first name"
+                     type="text"
+                     required="">
+            </div>
+            <div class="icon2">
+              <label class="header">Email</label>
+              <input placeholder=" "
+                     name="Email"
+                     type="email"
+                     required="">
+            </div>
+            <label class="header">Votre message</label>
+            <textarea class="w3l_summary"
+                      required=""></textarea>
+            <input type="submit"
+                   value="Envoyer">
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //contact -->
+<div class="agileits_w3layouts-footer">
+  <p>© 2018. All rights reserved
+  </p>
+</div>
 
 <router-outlet></router-outlet>
