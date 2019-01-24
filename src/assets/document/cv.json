@@ -1,0 +1,73 @@
+{
+  "mesprojects": [{
+      "type": "Projet personnel",
+      "description": "Site web pour les moniteurs",
+      "techno": "reactjs, php, silex, codeception",
+      "images": ["images/gestion_autoecole.png"],
+      "link": ""
+    },
+    {
+      "type": "Projet en entreprise",
+      "description": "Site web Mobileglobe",
+      "techno": "PHP, html, css, js",
+      "images": ["images/mobileglobe.png"],
+      "link": "https://pro.mobileglobe.com/"
+    },
+    {
+      "type": "Projet en entreprise",
+      "description": "Site web Danew",
+      "techno": "Php, mysql",
+      "images": ["images/danew.png"],
+      "link": "https://danew.fr/"
+    },
+    {
+      "type": "Projet en entreprise",
+      "description": "Application MobileGlobe",
+      "techno": "Android native",
+      "images": ["images/feature_screen.png"],
+      "link": "https://play.google.com/store/apps/details?id=com.mobileglobe.android.MobileGlobe&hl=en"
+    },
+    {
+      "type": "Projet personnel",
+      "description": "Jeux vidéo roguelike dungeon",
+      "techno": "reactjs, canvas",
+      "images": ["images/roguelikedungeon.png"],
+      "link": "https://khacquyetdang.github.io/roguelike-dungeon-crawler-game/"
+    },
+    {
+      "type": "Projet personnel",
+      "description": "Web app pinterest clone",
+      "techno": "reactjs",
+      "images": ["images/pinterestclone.png"],
+      "link": "https://pinterestclone92.herokuapp.com/#/"
+    },
+    {
+      "type": "Projet personnel",
+      "description": "Jeux vidéo simon",
+      "techno": "jquery",
+      "images": ["images/simon_games.png"],
+      "link": "http://139.59.148.85/html/code-io/simon_games/"
+    },
+    {
+      "type": "Projet personnel",
+      "description": "Statistique",
+      "techno": "d3js, reactjs",
+      "images": ["images/d3js.png"],
+      "link": "https://khacquyetdang.github.io/d3heatmap/#/"
+    },
+    {
+      "type": "Projet en entreprise",
+      "description": "Site web et application android",
+      "techno": "Php, android",
+      "images": ["images/callandjoin.png"],
+      "link": "https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en"
+    },
+    {
+      "type": "Projet personnel",
+      "description": "Site web pour les moniteurs",
+      "techno": "Meteor, reactjs",
+      "images": ["images/googleclone/main.png"],
+      "link": "https://googlemapclone.herokuapp.com/"
+    }
+  ]
+}
