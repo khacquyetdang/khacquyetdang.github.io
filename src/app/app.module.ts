@@ -9,6 +9,7 @@ import {HeaderComponent} from './component/header/header.component';
 import {EducationComponent} from './component/education/education.component';
 import {ContactComponent} from './component/contact/contact.component';
 import {ProjectComponent} from './component/project/project.component';
+import {PortfolioComponent} from './component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ProjectComponent} from './component/project/project.component';
     HeaderComponent,
     EducationComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule

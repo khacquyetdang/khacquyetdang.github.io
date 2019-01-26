@@ -1,0 +1,65 @@
+<div class="w3ls-section agileits-gallery"
+     id="gallery">
+  <div class="container">
+    <h3 class="agileits-title">Mes projets</h3>
+    <div class="bs-example bs-example-tabs"
+         role="tabpanel"
+         data-example-id="togglable-tabs">
+      <ul id="myTab"
+          class="nav nav-tabs"
+          role="tablist">
+        <li role="presentation"
+            class="active">
+          <a href="#home-main"
+             id="home-tab"
+             role="tab"
+             data-toggle="tab"
+             aria-controls="home-main"
+             aria-expanded="true">Tous</a>
+        </li>
+        <li role="presentation"
+            *ngFor="let tag of tags">
+          <a href="{{'#' + tag}}"
+             role="tab"
+             id="{{tag + '-tag'}}"
+             data-toggle="tab"
+             attr.aria-controls="{{tag}}">{{tag}}</a>
+        </li>
+      </ul>
+      <div id="myTabContent"
+           class="tab-content">
+        <div role="tabpanel"
+             class="tab-pane fade in active"
+             id="home-main"
+             aria-labelledby="home-tab">
+          <div class="w3_tab_img">
+            <div class="row equal">
+              <app-project class="col-sm-3 w3_tab_img_left"
+                           *ngFor="let project of this.projects"
+                           [project]="project">
+              </app-project>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div *ngFor="let tag of this.tags"
+             role="tabpanel"
+             class="tab-pane fade"
+             id="{{tag}}"
+             attr.aria-labelledby="{{tag + '-tab'}}">
+          <div class="w3_tab_img">
+            <div class="row equal">
+
+              <app-project class="col-sm-3 w3_tab_img_left"
+                           *ngFor="let project of this.projectsByTags[tag]"
+                           [project]="project"></app-project>
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

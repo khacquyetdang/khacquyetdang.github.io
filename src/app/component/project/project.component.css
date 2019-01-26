@@ -1,0 +1,8 @@
+.equal>div[class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.w3_tab_img_left_inner {
+  height: 100%;
+}
