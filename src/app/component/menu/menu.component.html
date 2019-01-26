@@ -1,9 +1,11 @@
 <div class="header">
   <div class="container">
-    <div class="menu">
+    <div class="{{menuClass()}}">
       <a href=""
-         id="menuToggle">
-        <span class="navClosed"></span>
+         id="menuToggle"
+         title="{{titleMenuToggleAttr()}}"
+         (click)="onMenuClick($event)">
+        <span class="{{navClass}}"></span>
       </a>
       <nav>
         <a href="#home"
@@ -20,27 +22,6 @@
            download="Dang_Khac_Quyet_CV.pdf">Mon CV</a>
 
       </nav>
-      <script>
-        (function ($) {
-          // Menu Functions
-          $(document).ready(function () {
-            $('#menuToggle').click(function (e) {
-              var $parent = $(this).parent('.menu');
-              $parent.toggleClass("open");
-              var navState = $parent.hasClass('open') ? "hide" : "show";
-              $(this).attr("title", navState + " navigation");
-              // Set the timeout to the animation length in the CSS.
-              setTimeout(function () {
-                console.log("timeout set");
-                $('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
-              }, 200);
-              e.preventDefault();
-            });
-          });
-        })(jQuery);
-
-      </script>
-
     </div>
     <div class="clearfix"> </div>
   </div>
