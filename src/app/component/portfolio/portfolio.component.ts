@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectService} from 'src/app/service/project.service';
 import {Project} from 'src/app/model/project';
+//import * as $ from 'src/assets/js/jquery-2.2.3.min';
 
 @Component({selector: 'app-portfolio', templateUrl: './portfolio.component.html', styleUrls: ['./portfolio.component.css']})
 export class PortfolioComponent implements OnInit {
@@ -23,4 +24,7 @@ export class PortfolioComponent implements OnInit {
     console.log("project", this.projects);
   }
 
+  ngDoCheck() {
+    // $('.cm-overlay').cmOverlay();
+  }
 }

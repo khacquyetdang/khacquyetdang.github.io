@@ -1,5 +1,13 @@
 {
   "mesprojects": [{
+      "type": "Projet en entreprise",
+      "description": "Application web pour suivre les consommations (ENGIE)",
+      "techno": "vuejs, aem, java j2ee",
+      "images": ["assets/images/engie_maconso/graphe_elec_avec_temperature.png"],
+      "link": "https://particuliers.engie.fr/",
+      "tags": ["web"]
+    },
+    {
       "type": "Projet personnel",
       "description": "Site web pour les moniteurs",
       "techno": "reactjs, php, silex, codeception",
