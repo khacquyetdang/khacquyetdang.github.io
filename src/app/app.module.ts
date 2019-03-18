@@ -10,6 +10,8 @@ import {EducationComponent} from './component/education/education.component';
 import {ContactComponent} from './component/contact/contact.component';
 import {ProjectComponent} from './component/project/project.component';
 import {PortfolioComponent} from './component/portfolio/portfolio.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import {PortfolioComponent} from './component/portfolio/portfolio.component';
     PortfolioComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
