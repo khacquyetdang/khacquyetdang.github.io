@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "deploy": "ng build && git add . && git commit -m \"Initial dist subtree commit\" && git subtree push --prefix dist/moncv origin master",
+    "postinstall": "ng build --aot -prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -48,5 +50,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
+  },
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
   }
 }
