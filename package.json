@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build": "ng build",
     "deploy": "ng build && git add . && git commit -m \"Initial dist subtree commit\" && git subtree push --prefix dist/moncv origin master",
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
