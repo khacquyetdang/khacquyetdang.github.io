@@ -133,6 +133,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./component/contact/contact.component */ "./src/app/component/contact/contact.component.ts");
 /* harmony import */ var _component_project_project_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./component/project/project.component */ "./src/app/component/project/project.component.ts");
 /* harmony import */ var _component_portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./component/portfolio/portfolio.component */ "./src/app/component/portfolio/portfolio.component.ts");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 
@@ -161,7 +165,7 @@ var AppModule = /** @class */ (function () {
                 _component_portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_11__["PortfolioComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_12__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].production })
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -519,6 +523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import * as $ from 'src/assets/js/jquery-2.2.3.min';
 var PortfolioComponent = /** @class */ (function () {
     function PortfolioComponent(service) {
         this.service = service;
@@ -534,6 +539,9 @@ var PortfolioComponent = /** @class */ (function () {
             .service
             .getAllTags();
         console.log("project", this.projects);
+    };
+    PortfolioComponent.prototype.ngDoCheck = function () {
+        // $('.cm-overlay').cmOverlay();
     };
     PortfolioComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ selector: 'app-portfolio', template: __webpack_require__(/*! ./portfolio.component.html */ "./src/app/component/portfolio/portfolio.component.html"), styles: [__webpack_require__(/*! ./portfolio.component.css */ "./src/app/component/portfolio/portfolio.component.css")] }),
@@ -817,7 +825,7 @@ var ProjectService = /** @class */ (function () {
 /*! exports provided: mesprojects, default */
 /***/ (function(module) {
 
-module.exports = {"mesprojects":[{"type":"Projet personnel","description":"Site web pour les moniteurs","techno":"reactjs, php, silex, codeception","images":["assets/images/gestion_autoecole.png"],"link":"http://easypermis.fr/home/#/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web Mobileglobe","techno":"PHP, html, css, js","images":["assets/images/mobileglobe.png"],"link":"https://pro.mobileglobe.com/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web Danew","techno":"Php, mysql","images":["assets/images/danew.png"],"link":"https://danew.fr/","tags":["web"]},{"type":"Projet en entreprise","description":"Application MobileGlobe","techno":"Android native","images":["assets/images/feature_screen.png"],"link":"https://play.google.com/store/apps/details?id=com.mobileglobe.android.MobileGlobe&hl=en","tags":["mobile"]},{"type":"Projet personnel","description":"Jeux vidéo roguelike dungeon","techno":"reactjs, canvas","images":["assets/images/roguelikedungeon.png"],"link":"https://khacquyetdang.github.io/roguelike-dungeon-crawler-game/","tags":["web","jeux"]},{"type":"Projet personnel","description":"Web app pinterest clone","techno":"reactjs","images":["assets/images/pinterestclone.png"],"link":"https://pinterestclone92.herokuapp.com/#/","tags":["web"]},{"type":"Projet personnel","description":"Jeux vidéo simon","techno":"jquery","images":["assets/images/simon_games.png"],"link":"http://139.59.148.85/html/code-io/simon_games/","tags":["jeux"]},{"type":"Projet personnel","description":"Statistique","techno":"d3js, reactjs","images":["assets/images/d3js.png"],"link":"https://khacquyetdang.github.io/d3heatmap/#/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web et application android","techno":"Php, android","images":["assets/images/callandjoin.png"],"link":"https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en","tags":["web"]},{"type":"Projet personnel","description":"Site web pour les moniteurs","techno":"Meteor, reactjs","images":["assets/images/googleclone/main.png"],"link":"https://googlemapclone.herokuapp.com/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web et application android","techno":"Php, android","images":["assets/images/callandjoin.png"],"link":"https://googlemapclone.herokuapp.com/","tags":["web"]},{"type":"Projet en entreprise","description":"L'application de conférence entre particuliers","techno":"Android","images":["assets/images/kakiluki.png"],"link":"https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en","tags":["mobile"]}]};
+module.exports = {"mesprojects":[{"type":"Projet en entreprise","description":"Application web pour suivre les consommations (ENGIE)","techno":"vuejs, aem, java j2ee","images":["assets/images/engie_maconso/graphe_elec_avec_temperature.png"],"link":"https://particuliers.engie.fr/","tags":["web"]},{"type":"Projet personnel","description":"Site web pour les moniteurs","techno":"reactjs, php, silex, codeception","images":["assets/images/gestion_autoecole.png"],"link":"http://easypermis.fr/home/#/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web Mobileglobe","techno":"PHP, html, css, js","images":["assets/images/mobileglobe.png"],"link":"https://pro.mobileglobe.com/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web Danew","techno":"Php, mysql","images":["assets/images/danew.png"],"link":"https://danew.fr/","tags":["web"]},{"type":"Projet en entreprise","description":"Application MobileGlobe","techno":"Android native","images":["assets/images/feature_screen.png"],"link":"https://play.google.com/store/apps/details?id=com.mobileglobe.android.MobileGlobe&hl=en","tags":["mobile"]},{"type":"Projet personnel","description":"Jeux vidéo roguelike dungeon","techno":"reactjs, canvas","images":["assets/images/roguelikedungeon.png"],"link":"https://khacquyetdang.github.io/roguelike-dungeon-crawler-game/","tags":["web","jeux"]},{"type":"Projet personnel","description":"Web app pinterest clone","techno":"reactjs","images":["assets/images/pinterestclone.png"],"link":"https://pinterestclone92.herokuapp.com/#/","tags":["web"]},{"type":"Projet personnel","description":"Jeux vidéo simon","techno":"jquery","images":["assets/images/simon_games.png"],"link":"http://139.59.148.85/html/code-io/simon_games/","tags":["jeux"]},{"type":"Projet personnel","description":"Statistique","techno":"d3js, reactjs","images":["assets/images/d3js.png"],"link":"https://khacquyetdang.github.io/d3heatmap/#/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web et application android","techno":"Php, android","images":["assets/images/callandjoin.png"],"link":"https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en","tags":["web"]},{"type":"Projet personnel","description":"Site web pour les moniteurs","techno":"Meteor, reactjs","images":["assets/images/googleclone/main.png"],"link":"https://googlemapclone.herokuapp.com/","tags":["web"]},{"type":"Projet en entreprise","description":"Site web et application android","techno":"Php, android","images":["assets/images/callandjoin.png"],"link":"https://googlemapclone.herokuapp.com/","tags":["web"]},{"type":"Projet en entreprise","description":"L'application de conférence entre particuliers","techno":"Android","images":["assets/images/kakiluki.png"],"link":"https://play.google.com/store/apps/details?id=com.Kakiluki&hl=en","tags":["mobile"]}]};
 
 /***/ }),
 
