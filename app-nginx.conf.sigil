@@ -13,12 +13,19 @@ http {
   server {
     listen {{ $.PORT }};
     server_name  _;
-    root dist/moncv;
+    {{ if ne $.NGINX_ROOT "" }}
+      root /app/www/{{ $.NGINX_ROOT }};
+    {{ else }}
+      root /app/www;
+    {{ end }}
     index index.html;
-    port_in_redirect off;
 
     location / {
-      try_files $uri $uri/ /index.html;
+      try_files /index.html /favicon.ico /logo.png;
+    }
+
+    location /css/ {
+      try_files $uri;
     }
   }
 }
