@@ -13,7 +13,7 @@ http {
   server {
     listen {{ $.PORT }};
     server_name  _;
-    root /app/www;
+    root {{ $.NGINX_ROOT }};
     index index.html;
     port_in_redirect off;
 
