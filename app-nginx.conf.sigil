@@ -21,7 +21,7 @@ http {
     index index.html;
 
     location / {
-      try_files /index.html /favicon.ico /logo.png;
+      try_files $uri $uri/ /index.html /favicon.ico /logo.png;
     }
 
     location /css/ {
